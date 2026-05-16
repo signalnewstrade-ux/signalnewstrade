@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy — Signal News Trade</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #0a0e14; color: #e6edf3; line-height: 1.7; }
+  .container { max-width: 760px; margin: 0 auto; padding: 3rem 1.5rem; }
+  h1 { color: #58a6ff; }
+  h2 { color: #58a6ff; margin-top: 2rem; border-bottom: 1px solid #21262d; padding-bottom: .3rem; }
+  code { background: #161b22; padding: .15em .4em; border-radius: 4px; font-size: .9em; }
+  a { color: #58a6ff; }
+  .meta { color: #8b949e; font-size: .9rem; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Privacy Policy</h1>
+<p class="meta">Signal News Trade — Last updated 2026-05-16</p>
+
+<h2>1. Who this policy applies to</h2>
+<p>
+  Signal News Trade ("the App") is a personal automation tool operated by and
+  for a single account owner. The App publishes original financial educational
+  short videos to the operator's own social media accounts, including TikTok.
+  This policy describes what data the App accesses, how it is stored, and how
+  the operator can revoke access.
+</p>
+
+<h2>2. Data accessed from TikTok</h2>
+<p>The App requests the following TikTok OAuth 2.0 scopes:</p>
+<ul>
+  <li><code>user.info.basic</code> — to read the operator's <code>open_id</code>,
+      <code>union_id</code>, <code>display_name</code>, and <code>avatar_url</code>.
+      Used to confirm the post lands on the correct account and to construct
+      the canonical post URL.</li>
+  <li><code>video.upload</code> — to transfer prepared MP4 files to TikTok's
+      Content Posting API CDN.</li>
+  <li><code>video.publish</code> — to publish the uploaded video to the
+      operator's own TikTok profile.</li>
+</ul>
+<p>
+  The App does <strong>not</strong> request, read, or store any data belonging
+  to any TikTok user other than the operator. It does not read public videos,
+  comments, follower lists, messages, or analytics of other accounts.
+</p>
+
+<h2>3. Tokens and where they are stored</h2>
+<ul>
+  <li>The OAuth <code>access_token</code> and <code>refresh_token</code> are
+      stored exclusively on the operator's local machine in a <code>.env</code>
+      file inside the project directory.</li>
+  <li>Tokens are never transmitted to any third-party server, analytics
+      service, or cloud storage.</li>
+  <li>Tokens are read into memory only when the upload script runs, and the
+      script communicates exclusively with TikTok's official API endpoints at
+      <code>open.tiktokapis.com</code>.</li>
+</ul>
+
+<h2>4. Video content uploaded</h2>
+<p>
+  All video files uploaded by the App are produced by the operator's own
+  content pipeline: vertical 1080×1920 MP4 files containing original Spanish
+  voice-over commentary on the day's financial market news. No content
+  belonging to other TikTok users is republished by the App.
+</p>
+
+<h2>5. Data retention</h2>
+<ul>
+  <li>Tokens persist locally until the operator deletes them or revokes API
+      access from TikTok's app-management page.</li>
+  <li>Videos uploaded via the App follow TikTok's own retention and visibility
+      policies once published.</li>
+  <li>Operational logs (status codes, publish_ids) are written locally and
+      rotated by the operator manually.</li>
+</ul>
+
+<h2>6. Third-party sharing</h2>
+<p>
+  No data accessed via the TikTok API is shared with any third party. The App
+  does not integrate with analytics platforms, advertising networks, or
+  external storage providers.
+</p>
+
+<h2>7. Operator rights and revocation</h2>
+<p>
+  The account owner may revoke the App's access at any time via TikTok at:
+  <br><a href="https://www.tiktok.com/setting/manage-app">https://www.tiktok.com/setting/manage-app</a>
+</p>
+<p>Revocation invalidates the stored tokens and prevents any further API access.</p>
+
+<h2>8. Security</h2>
+<ul>
+  <li>The local machine running the App is protected by the operator's own
+      operating system security controls (login password, disk encryption).</li>
+  <li>The <code>.env</code> file is excluded from version control via
+      <code>.gitignore</code> and is never committed to public repositories.</li>
+  <li>The App uses HTTPS exclusively for all communication with TikTok APIs.</li>
+</ul>
+
+<h2>9. Children's data</h2>
+<p>
+  The App is operated by an adult content creator and does not target,
+  collect from, or process data belonging to minors. The operator certifies
+  their own TikTok account is set to an audience of 18+.
+</p>
+
+<h2>10. Changes to this policy</h2>
+<p>
+  Material changes to this policy will be reflected by updating the
+  "Last updated" date at the top. Continued use of the App after a change
+  constitutes acceptance.
+</p>
+
+<h2>11. Contact</h2>
+<p>
+  Questions about this policy can be sent to
+  <a href="mailto:contact@signalnewstrade.example">contact@signalnewstrade.example</a>.
+</p>
+
+<p><a href="index.html">← Back to home</a></p>
+</div>
+</body>
+</html>
